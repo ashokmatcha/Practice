@@ -1,6 +1,44 @@
 {
-  "scopes": [],
-  "attributes": [],
-  "role-templates": [],
-  "authorities-inheritance": false
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.admin",
+      "description": "admin"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "Country",
+      "description": "Country",
+      "valueType": "s",
+      "valueRequired": false
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "admin",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.admin"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "userattributes",
+      "description": "generated",
+      "default-role-name": "Attributes of a User",
+      "scope-references": [],
+      "attribute-references": [
+        "Country"
+      ]
+    }
+  ],
+  "oauth2-configuration": {
+    "credential-types": [
+        "binding-secret",
+        "x509"
+    ],
+    "redirect-uris": [
+        "https://*.applicationstudio.cloud.sap/**"
+    ]
+}
 }

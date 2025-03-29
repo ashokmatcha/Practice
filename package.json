@@ -28,7 +28,7 @@
         "ashokabm92@gmail.com": {
           "password": "Narayana7*",
           "roles": [ "admin" ],
-          "attr": { "Country" : "IN" }
+          "attr": { "Country": ["IN", "890"] }
      
         }
       }
